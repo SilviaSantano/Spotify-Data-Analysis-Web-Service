@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+h3 {
+    margin: 50px auto;
+    width: 80%;
+    text-align: justify;
+}
+form {
+    margin: 50px auto;
+    width: 80%;
+    text-align: justify;
+}
+label {
+    font-weight: bold;
+}
+input[type="file"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  .chart-container {
+    margin: 50px auto;
+    width: 80%;
+}
+.plot {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display:block;
+}

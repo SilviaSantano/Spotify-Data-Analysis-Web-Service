@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify Streaming Data analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}" type="text/css">
+  </head>
+  <body>
+    <header>
+    <h1>Spotify Streaming Data analysis</h1>
+    <h3>Upload a ZIP file containing:<br> - Your library (YourLibrary.json)<br> - The streaming history (StreamingHistory0.json)<br> - All parts of the extended history (endsong_*.json).</h3>
+  </header>
+    <main>
+    <form action="/analysis" method="POST" enctype="multipart/form-data">
+      <input type="file" id="history" name="history"><br><br>
+      <input type="submit" value="Start analysis" id="submit">
+    </form>
+    <section>
+    <div id='chart1'></div>
+    <div id='chart2'></div>
+    <div id='chart3'></div>
+    <div id='chart4'></div>
+    <div id='chart5'></div>
+    <div id='chart6'></div>
+    <div id='chart7'></div>
+    <div id='chart8'></div>
+    <div id='chart9'></div>
+    <div id='chart10'></div>
+    <div id='chart11'></div>
+    <div id='chart12'></div>
+    <div id='chart13'></div>
+    <div id='chart16'>
+      <img class="plot" src="../static/plot.jpg">
+    </div>
+    <div id='chart14'></div>
+    <div id='chart15'>
+      <img class="plot" src="../static/wordcloud.jpg">
+    </div>
+  </section>
+</main>
+<footer>
+  </body>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script type='text/javascript'>
+    Plotly.plot('chart1',{{graphJSON1 | safe}},{});
+    Plotly.plot('chart2',{{graphJSON2 | safe}},{});
+    Plotly.plot('chart3',{{graphJSON3 | safe}},{});
+    Plotly.plot('chart4',{{graphJSON4 | safe}},{});
+    Plotly.plot('chart5',{{graphJSON5 | safe}},{});
+    Plotly.plot('chart6',{{graphJSON6 | safe}},{});
+    Plotly.plot('chart7',{{graphJSON7 | safe}},{});
+    Plotly.plot('chart8',{{graphJSON8 | safe}},{});
+    Plotly.plot('chart9',{{graphJSON9 | safe}},{});
+    Plotly.plot('chart10',{{graphJSON10 | safe}},{});
+    Plotly.plot('chart11',{{graphJSON11 | safe}},{});
+    Plotly.plot('chart12',{{graphJSON12 | safe}},{});
+    Plotly.plot('chart13',{{graphJSON13 | safe}},{});
+    Plotly.plot('chart14',{{graphJSON14 | safe}},{});
+  </script>
+</html>
